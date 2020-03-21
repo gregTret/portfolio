@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" />
+
+
+
+  <link rel="stylesheet" type="text/css" href="css/styles.css" />
+  <script type="text/javascript" src="scripts/scripts.js"></script>
+  <script type="text/javascript" src="scripts/search.js"></script>
+
+
+  <title>Code for Me</title>
+</head>
+
+<body>
+  <div class="Navigation" id="nav">
+    <a href="./index.html" style="font-weight: bold;">code for me</a>
+    <a href="./about.html">about</a>
+    <a href="./contact.html">contact</a>
+    <a href="javascript:void(0);" class="icon" onclick="ResponsiveNavvy()">
+      <i class="fa fa-bars"></i>
+    </a>
+  </div>
+
+
+  <br>
+  <br>
+  <br>
+  <div class="grid">
+    <!-- Below is the Card component -->
+    <div class="card" style="justify-content: flex-start; width: 50%;">
+      <div>
+        <h1>Search Code;</h1>
+        <p>
+          1.Select the language and
+          <br />
+          describe your search;
+        </p>
+      </div>
+    </div>
+    <!-- Below is the Card component for the Form -->
+    <div class="card" style="justify-content: flex-end">
+      <div>
+        <form action="javascript:submitFunction();">
+          <label>
+            <input type="text" name="language" placeholder="i.e C, Python, Java" id="a" class="input" required />
+          </label>
+          <br />
+          <label><input type="text" name="description" placeholder="i.e Merge Sort, Bubble Sort" id="b" class="input"
+              style=" height: 10rem; margin-top: 2rem" required /></label>
+          <br />
+          <input type="submit" value="Submit" class="submit"
+            onclick="myFunc(document.getElementById('a').value,document.getElementById('b').value)" />
+        </form>
+      </div>
+    </div>
+  </div>
+  <br />
+  <a name="CODEDISPLAY"></a>
+
+  <!-- This ONLY appears when the user has filled out the form -->
+  <div class="grid" id="show" style="display:none;">
+    <!-- Below is the Card component -->
+    <div class="card" style="justify-content: flex-start; width: 50%;">
+      <div>
+        <h1>Top Results;</h1>
+        <!-- <p id ="link1">Link:</p> -->
+        <p style="text-align: center;" id="link1">Link: </p>
+      </div>
+    </div>
+    <!-- Below is the Card component for the Form -->
+    <div class="card" style="justify-content: flex-end">
+      <div>
+        <form>
+          <label>
+            <textarea type="text" name="code" placeholder="" id="r1" class="topResult"></textarea>
+          </label>
+          <br />
+          <br />
+        </form>
+      </div>
+    </div>
+
+    <form>
+      <label>
+        <textarea type="text" name="code" placeholder="" id="r2" class="moreResult"></textarea>
+      </label>
+      <p style="text-align: center;" id="link2">Link: </p>
+      <br />
+      <br />
+      <label>
+        <textarea type="text" name="code" placeholder="" id="r3" class="moreResult"></textarea>
+      </label>
+      <p style="text-align: center;" id="link3">Link: </p>
+
+      <br />
+      <br />
+      <label>
+        <textarea type="text" name="code" placeholder="" id="r4" class="moreResult"></textarea>
+      </label>
+      <p style="text-align: center;" id="link4">Link: </p>
+
+      <br />
+      <br />
+      <label>
+        <textarea type="text" name="code" placeholder="" id="r5" class="moreResult"></textarea>
+      </label>
+      <p style="text-align: center;" id="link5">Link: </p>
+    </form>
+
+  </div>
+
+</body>
+</html>
