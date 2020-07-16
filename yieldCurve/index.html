@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+	<head>
+		<script src="https://cdn.plot.ly/plotly-latest.min.js"></script>
+		<script type="text/javascript" src='includes/script.js'> </script>
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+		<link rel="stylesheet" href="includes/stylesheet.css">
+		<link href="https://fonts.googleapis.com/css2?family=Roboto+Mono:wght@400&display=swap" rel="stylesheet">
+
+	</head>
+	<body style="background-color: #e6e6e6" onload="setup()">
+		<div class="wrapper">
+		<header class="header-basic-light">
+			<div class="header-limiter">
+				<h1><a href="#"><span>Data Modelling</span></a></h1>
+				<nav>
+					<a onClick="document.getElementById('description').scrollIntoView();">What's a yield curve?</a>
+				</nav>
+			</div>
+		</header>
+    	<main>
+    		<div class="row">
+    			<div class="columnSmall">
+		    		<div class="dropdown">
+					  <button class="dropbtn">Year Selection</button>
+					  <div class="dropdown-content">
+					    <a onclick="callIt(2020)">2020</a>
+					    <a onclick="callIt(2019)">2019</a>
+					    <a onclick="callIt(2018)">2018</a>
+					    <a onclick="callIt(2017)">2017</a>
+					    <a onclick="callIt(2016)">2016</a>
+					    <a onclick="callIt(2015)">2015</a>
+					    <a onclick="callIt(2014)">2014</a>
+					    <a onclick="callIt(2013)">2013</a>
+					    <a onclick="callIt(2012)">2012</a>
+					    <a onclick="callIt(2011)">2011</a>
+					    <a onclick="callIt(2010)">2010</a>
+					    <a onclick="callIt(2009)">2009</a>
+					    <a onclick="callIt(2008)">2008</a>
+					    <a onclick="callIt(2007)">2007</a>
+					    <a onclick="callIt(2006)">2006</a>
+					    <a onclick="callIt(2005)">2005</a>
+					    <a onclick="callIt(2004)">2004</a>
+					    <a onclick="callIt(2003)">2003</a>
+					    <a onclick="callIt(2002)">2002</a>
+					    <a onclick="callIt(2001)">2001</a>
+					    <a onclick="callIt(2000)">2000</a>
+					    <a onclick="callIt(1999)">1999</a>
+					    <a onclick="callIt(1998)">1998</a>
+					    <a onclick="callIt(1997)">1997</a>
+					    <a onclick="callIt(1996)">1996</a>
+					    <a onclick="callIt(1995)">1995</a>
+					    <a onclick="callIt(1994)">1994</a>
+					    <a onclick="callIt(1993)">1993</a>
+					    <a onclick="callIt(1992)">1992</a>
+					    <a onclick="callIt(1991)">1991</a>
+					    <a onclick="callIt(1990)">1990</a>
+					  </div>
+					</div>
+				</div>
+				<div class="columnBig">
+					<div id='myDiv' class='myDiv' style="float:left">
+						<div id="placeholder" class="placeholder">
+							<h1 style="font-family: 'Roboto Mono', monospace;">Loading...</h1>
+						</div>
+					</div>
+				</div>
+			</div>
+		
+		</main>
+		</div>
+
+		<div id='description'>
+			<div class="descriptionBox">
+				<div class="box1">
+					<h2 style="font-family: 'Roboto Mono', monospace;">Ok so thats pretty and all... but what does it mean?</h2>
+					<p style="font-family: 'Roboto Mono', monospace;">In general: Black/Grey = <strong>Healthy</strong> while Red = <strong>NOT Healthy</strong> </p>
+					<p style="font-family: 'Roboto Mono', monospace;">More Specifically: The yield curve shows the interest rates (Yields) across debt obligations on different lengths of time (Maturities). If this data is plotted a trend begins to emerge known as the Yield Curve.</p>
+
+					<p style="font-family: 'Roboto Mono', monospace;">There are 3 different types of Yield curves as demonstrated by the graph to the right. The most important thing to note is that yields decrease as demand increases, and subsequently yields increase as demand decreases. Under good economic conditions (Not a recession) the yield curve will be normal, and an inverted yield curve is traditionally a leading indicator of a recession.</p>
+
+					<h3 style="font-family: 'Roboto Mono', monospace;">Types of Yield Curves</h3>
+					<p style="font-family: 'Roboto Mono', monospace;">A <strong>regular</strong> yield curves generally means that investor confidence is good and the expectation is that interest on debt will increase as time increases. It also shows that there isn't a lot of demand for safe investments: signalling boom times.</p>
+
+					<p style="font-family: 'Roboto Mono', monospace;">A <strong>flat</strong> yield curve means that there is some uncertainty in the economy, but it is a neutral indicator.</p>
+
+					<p style="font-family: 'Roboto Mono', monospace;">An <strong>Inverted</strong> yield curve screams danger. When the yield curve inverts short term debt obligations have a higher yield than long term ones this is a byproduct of a poor economic outlook in the future.</p>
+
+					<h3 style="font-family: 'Roboto Mono', monospace;">Visualization</h3>
+					<p style="font-family: 'Roboto Mono', monospace;">In the visualization above the time until maturity ranges from 1 Month all the way up to 30 Years as taken from the <a style=" font-family: 'Roboto Mono', monospace;" href="https://www.treasury.gov/resource-center/data-chart-center/interest-rates/pages/textview.aspx?data=yield" >USA Federal Treasury website</a>. The data begins in 1990 and is automatically updated daily to reflect intraday changes to Yield Curves. The data has been formatted and can be easily accesed on my <a style=" font-family: 'Roboto Mono', monospace;" href="https://github.com/gregTret/dataSets/tree/master/yieldCurve">Github</a>. </p>	
+
+					<h3 style="font-family: 'Roboto Mono', monospace;">Additional Resources</h3>
+					<p style="font-family: 'Roboto Mono', monospace;">
+
+						<a style=" font-family: 'Roboto Mono', monospace;" href="https://www.investopedia.com/terms/y/yieldcurve.asp" >Investopedia</a>
+						<a style=" font-family: 'Roboto Mono', monospace;" href="https://www.khanacademy.org/economics-finance-domain/core-finance/stock-and-bonds/bonds-tutorial/v/introduction-to-the-yield-curve" >Khan Academy</a>
+						<a style=" font-family: 'Roboto Mono', monospace;" href="https://investor.vanguard.com/investing/investment/what-is-a-bond">Bonds: Vanguard</a>
+					</p>				
+				</div>
+				<div id='descriptionGraph' class='descriptionGraph' style="float:right"></div>
+			</div>
+		</div>	
+
+
+    <footer></footer>
+	</div>
+
+	</body>
+</html>
+
+
+
+<script>
+		function setup(){
+			document.getElementById("myDiv").addEventListener("load",callIt(2020),{passive: true})
+			descriptionGraphs("#e6e6e6")
+		}
+		function callIt(year){
+			jQuery.ajax({
+			    url: 'https://raw.githubusercontent.com/gregTret/dataSets/master/yieldCurve/'+year+'.csv',
+			    type: 'get',
+			    dataType: 'text',
+			    success: function(data) {
+			        let lines = data.split('\n');
+			        let fields = lines[0].split(',');
+			        let output = [];
+			        
+			        for(let i = 1; i < lines.length; i++){
+			           let current = lines[i].split(',');
+			           let doc = {};
+			           for(let j = 0; j < fields.length; j++){
+			               doc[fields[j]] = current[j];
+			           }
+			           output.push(doc);
+			        }       
+			        generate(output,year,"#e6e6e6");
+			        console.clear();
+			    },
+			    error: function(jqXHR, textStatus, errorThrow){
+			        console.log(textStatus);
+			    }
+			});
+		}
+	</script>
