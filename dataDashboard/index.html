@@ -11,63 +11,19 @@
 		<div class="wrapper">
 		<header class="header-basic-light">
 			<div class="header-limiter">
-				<h1 style="font-family: 'Roboto Mono'"><a href="#"><span>Data Modelling</span></a></h1>
+				<h1><a href="#"><span>Data Modelling</span></a></h1>
 				<nav>
-					<a style="font-family: 'Roboto Mono'; color: black;" onClick="document.getElementById('description').scrollIntoView();">What's a yield curve?</a>
-
-					<div class="dropdown">
-
-					  <button style="font-family: 'Roboto Mono' padding-bottom 100px; " class="dropbtn">Year Selection</button>
-
-					  <div class="dropdown-content">
-					    <a onclick="callIt(2020)">2020</a>
-					    <a onclick="callIt(2019)">2019</a>
-					    <a onclick="callIt(2018)">2018</a>
-					    <a onclick="callIt(2017)">2017</a>
-					    <a onclick="callIt(2016)">2016</a>
-					    <a onclick="callIt(2015)">2015</a>
-					    <a onclick="callIt(2014)">2014</a>	
-					    <a onclick="callIt(2013)">2013</a>
-					    <a onclick="callIt(2012)">2012</a>
-					    <a onclick="callIt(2011)">2011</a>
-					    <a onclick="callIt(2010)">2010</a>
-					    <a onclick="callIt(2009)">2009</a>
-					    <a onclick="callIt(2008)">2008</a>
-					    <a onclick="callIt(2007)">2007</a>
-					    <a onclick="callIt(2006)">2006</a>
-					    <a onclick="callIt(2005)">2005</a>
-					    <a onclick="callIt(2004)">2004</a>
-					    <a onclick="callIt(2003)">2003</a>
-					    <a onclick="callIt(2002)">2002</a>
-					    <a onclick="callIt(2001)">2001</a>
-					    <a onclick="callIt(2000)">2000</a>
-					    <a onclick="callIt(1999)">1999</a>
-					    <a onclick="callIt(1998)">1998</a>
-					    <a onclick="callIt(1997)">1997</a>
-					    <a onclick="callIt(1996)">1996</a>
-					    <a onclick="callIt(1995)">1995</a>
-					    <a onclick="callIt(1994)">1994</a>
-					    <a onclick="callIt(1993)">1993</a>
-					    <a onclick="callIt(1992)">1992</a>
-					    <a onclick="callIt(1991)">1991</a>
-					    <a onclick="callIt(1990)">1990</a>
-					  </div>
-					</div>
-
+					<a onClick="document.getElementById('description').scrollIntoView();">About</a>
 				</nav>
 			</div>
 		</header>
     	<main>
     		<div class="row">
     			<div class="columnSmall">
-		    		
+
 				</div>
 				<div class="columnBig">
-					<div id='myDiv' class='myDiv' style="float:left">
-						<div id="placeholder" class="placeholder">
-							<h1 style="font-family: 'Roboto Mono', monospace;">Loading...</h1>
-						</div>
-					</div>
+					
 				</div>
 			</div>
 		
@@ -114,35 +70,3 @@
 
 
 
-<script>
-		function setup(){
-			document.getElementById("myDiv").addEventListener("load",callIt(2020),{passive: true})
-			descriptionGraphs("#e6e6e6")
-		}
-		function callIt(year){
-			jQuery.ajax({
-			    url: 'https://raw.githubusercontent.com/gregTret/dataSets/master/yieldCurve/'+year+'.csv',
-			    type: 'get',
-			    dataType: 'text',
-			    success: function(data) {
-			        let lines = data.split('\n');
-			        let fields = lines[0].split(',');
-			        let output = [];
-			        
-			        for(let i = 1; i < lines.length; i++){
-			           let current = lines[i].split(',');
-			           let doc = {};
-			           for(let j = 0; j < fields.length; j++){
-			               doc[fields[j]] = current[j];
-			           }
-			           output.push(doc);
-			        }       
-			        generate(output,year,"#e6e6e6");
-			        console.clear();
-			    },
-			    error: function(jqXHR, textStatus, errorThrow){
-			        console.log(textStatus);
-			    }
-			});
-		}
-	</script>

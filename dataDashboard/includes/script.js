@@ -91,16 +91,14 @@ function plotProperly(normal,II,ts,year,backgroundColour,multiplier){
 					allData.push(dd2)
 				}
 
+
 	var layout = {
 	  plot_bgcolor:"black",
       paper_bgcolor:backgroundColour,
       title: titleOfGraph,
-      font: {
-    	family: 'Roboto Mono',
-       },
-	   "titlefont": {
-	    "size": 25,
-	   },
+	  "titlefont": {
+	    "size": 30,
+	  },
 	  scene: {xaxis:{title: 'Months until Maturity'},
 		yaxis:{title: 'Day of year'},
 		zaxis:{title: 'Yield'},
