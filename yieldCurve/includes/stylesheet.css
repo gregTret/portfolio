@@ -1,3 +1,7 @@
+body{
+  margin:0;
+  padding:0;
+}
 
 .myDiv{
 	width:100%;
@@ -6,8 +10,7 @@
 
 
 .wrapper {
-    height: 100vh;
-    min-height: 1000px; 
+  height: auto;
     display: flex;
 
     /* Direction of the items, can be row or column */
@@ -20,7 +23,8 @@ footer {
 }
 
 main {
-    flex: 1;
+    display: flex;
+    width: 100%;
 }
 
 /* Dropdown Button */
@@ -67,13 +71,8 @@ main {
 /* Change the background color of the dropdown button when the dropdown content is shown */
 .dropdown:hover .dropbtn {background-color: #292c36}
 
-.columnSmall {
-  float: left;
-  width: 10%;
-}
 .columnBig{
-  float: left;
-  width: 90%;
+  width: 100%;
 }
 .row{
 	height:100%;
@@ -165,11 +164,6 @@ main {
 
 }
 
-body {
-  margin:0;
-  padding:0;
-}
-
 .descriptionBox {
   margin: auto;
   border-radius: 25px;
@@ -178,9 +172,11 @@ body {
   width: 90%;
   height: 800px;
   overflow-y: scroll;
+  display: block;
 }
+
 .box1{
-  float :left;
+  float:left; 
   max-width: 55%;
   min-width: 55%;
 }
@@ -189,7 +185,6 @@ body {
   max-width: 40%;
   min-width: 40%;
   position:relative;
-  float:right
 }
 
 
