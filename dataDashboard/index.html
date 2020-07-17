@@ -7,66 +7,64 @@
 		<link href="https://fonts.googleapis.com/css2?family=Roboto+Mono:wght@400&display=swap" rel="stylesheet">
 
 	</head>
-	<body style="background-color: #e6e6e6" onload="setup()">
-		<div class="wrapper">
-		<header class="header-basic-light">
-			<div class="header-limiter">
-				<h1><a href="#"><span>Data Modelling</span></a></h1>
-				<nav>
-					<a onClick="document.getElementById('description').scrollIntoView();">About</a>
-				</nav>
-			</div>
-		</header>
-    	<main>
-    		<div class="row">
-    			<div class="columnSmall">
+	<body style="background-color: #e6e6e6" onload="">
 
+		<div class="wrapper">
+			<header class="header-basic-light">
+				<div class="header-limiter">
+					<h1 style="font-family: 'Roboto Mono';"><a href="#"><span>Data Modelling</span></a></h1>
+						<nav>
+						<a style="font-family: 'Roboto Mono'; color: black;" href="http://codeforme.ca/portfolio">Contact</a>
+
+					</nav>
 				</div>
-				<div class="columnBig">
-					
-				</div>
-			</div>
+			</header>
 		
-		</main>
+
+
+
 		</div>
+
+		
 
 		<div id='description'>
 			<div class="descriptionBox">
+
 				<div class="box1">
-					<h2 style="font-family: 'Roboto Mono', monospace;">Ok so thats pretty and all... but what does it mean?</h2>
-					<p style="font-family: 'Roboto Mono', monospace;">In general: Black/Grey = <strong>Healthy</strong> while Red = <strong>NOT Healthy</strong> </p>
-					<p style="font-family: 'Roboto Mono', monospace;">More Specifically: The yield curve shows the interest rates (Yields) across debt obligations on different lengths of time (Maturities). If this data is plotted a trend begins to emerge known as the Yield Curve.</p>
+					<div onclick="goToLink('https://codeforme.ca/data/yieldcurve')" style="position:relative;" onmouseout="revertButton('imageStyle1','buttonText1')" onmouseover="alterButton('imageStyle1','buttonText1')">
+						<img id="imageStyle1" class="imageStyle1" src="images/yield.png" alt="Yield Example">
+						<p id="buttonText1" class="absolute-text-invisible">30 Years of the Yield Curve</p>
+					</div>	
+				</div>	
+<!-- 
+				<div class="box1">
+					<div onclick="goToLink('https://codeforme.ca/data/yieldcurve')" style="position:relative;" onmouseout="revertButton('imageStyle2','buttonText2')" onmouseover="alterButton('imageStyle2','buttonText2')">
+						<img id="imageStyle2" class="imageStyle1" src="images/yield.png" alt="Yield Example">
+						<p id="buttonText2" class="absolute-text-invisible">30 Years of the Yield Curve</p>
+					</div>	
+				</div>	
 
-					<p style="font-family: 'Roboto Mono', monospace;">There are 3 different types of Yield curves as demonstrated by the graph to the right. The most important thing to note is that yields decrease as demand increases, and subsequently yields increase as demand decreases. Under good economic conditions (Not a recession) the yield curve will be normal, and an inverted yield curve is traditionally a leading indicator of a recession.</p>
+				<div class="box1">
+					<div onclick="goToLink('https://codeforme.ca/data/yieldcurve')" style="position:relative;" onmouseout="revertButton('imageStyle3','buttonText3')" onmouseover="alterButton('imageStyle3','buttonText3')">
+						<img id="imageStyle3" class="imageStyle1" src="images/yield.png" alt="Yield Example">
+						<p id="buttonText3" class="absolute-text-invisible">30 Years of the Yield Curve</p>
+					</div>	
+				</div>	
 
-					<h3 style="font-family: 'Roboto Mono', monospace;">Types of Yield Curves</h3>
-					<p style="font-family: 'Roboto Mono', monospace;">A <strong>regular</strong> yield curves generally means that investor confidence is good and the expectation is that interest on debt will increase as time increases. It also shows that there isn't a lot of demand for safe investments: signalling boom times.</p>
+				<div class="box1">
+					<div onclick="goToLink('https://codeforme.ca/data/yieldcurve')" style="position:relative;" onmouseout="revertButton('imageStyle4','buttonText4')" onmouseover="alterButton('imageStyle4','buttonText4')">
+						<img id="imageStyle4" class="imageStyle1" src="images/yield.png" alt="Yield Example">
+						<p id="buttonText4" class="absolute-text-invisible">30 Years of the Yield Curve</p>
+					</div>	
+				</div>	 -->
 
-					<p style="font-family: 'Roboto Mono', monospace;">A <strong>flat</strong> yield curve means that there is some uncertainty in the economy, but it is a neutral indicator.</p>
 
-					<p style="font-family: 'Roboto Mono', monospace;">An <strong>Inverted</strong> yield curve screams danger. When the yield curve inverts short term debt obligations have a higher yield than long term ones this is a byproduct of a poor economic outlook in the future.</p>
-
-					<h3 style="font-family: 'Roboto Mono', monospace;">Visualization</h3>
-					<p style="font-family: 'Roboto Mono', monospace;">In the visualization above the time until maturity ranges from 1 Month all the way up to 30 Years as taken from the <a style=" font-family: 'Roboto Mono', monospace;" href="https://www.treasury.gov/resource-center/data-chart-center/interest-rates/pages/textview.aspx?data=yield" >USA Federal Treasury website</a>. The data begins in 1990 and is automatically updated daily to reflect intraday changes to Yield Curves. The data has been formatted and can be easily accesed on my <a style=" font-family: 'Roboto Mono', monospace;" href="https://github.com/gregTret/dataSets/tree/master/yieldCurve">Github</a>. </p>	
-
-					<h3 style="font-family: 'Roboto Mono', monospace;">Additional Resources</h3>
-					<p style="font-family: 'Roboto Mono', monospace;">
-
-						<a style=" font-family: 'Roboto Mono', monospace;" href="https://www.investopedia.com/terms/y/yieldcurve.asp" >Investopedia</a>
-						<a style=" font-family: 'Roboto Mono', monospace;" href="https://www.khanacademy.org/economics-finance-domain/core-finance/stock-and-bonds/bonds-tutorial/v/introduction-to-the-yield-curve" >Khan Academy</a>
-						<a style=" font-family: 'Roboto Mono', monospace;" href="https://investor.vanguard.com/investing/investment/what-is-a-bond">Bonds: Vanguard</a>
-					</p>				
-				</div>
-				<div id='descriptionGraph' class='descriptionGraph' style="float:right"></div>
 			</div>
-		</div>	
-
+		</div>
 
     <footer></footer>
-	</div>
 
 	</body>
 </html>
-
 
 

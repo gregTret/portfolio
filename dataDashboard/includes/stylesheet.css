@@ -1,13 +1,16 @@
+body{
+  margin:0;
+  padding:0;
+}
 
 .myDiv{
-	width:100%;
-	height:100%;
+  width:100%;
+  height:100%;
 }
 
 
 .wrapper {
-    height: 100vh;
-    min-height: 1000px; 
+  height: auto;
     display: flex;
 
     /* Direction of the items, can be row or column */
@@ -20,14 +23,15 @@ footer {
 }
 
 main {
-    flex: 1;
+    display: flex;
+    width: 100%;
 }
 
 /* Dropdown Button */
 .dropbtn {
   background-color: #303442;
   color: white;
-  padding: 16px;
+  padding: 14px;
   font-size: 16px;
   border: none;
 }
@@ -43,7 +47,7 @@ main {
   max-height:250px;/* you can change as you need it */
   overflow:auto;/* to get scroll */
   display: none;
-  /*position: absolute;*/
+  position: absolute;
   background-color: #f1f1f1;
   min-width: 160px;
   box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
@@ -67,17 +71,12 @@ main {
 /* Change the background color of the dropdown button when the dropdown content is shown */
 .dropdown:hover .dropbtn {background-color: #292c36}
 
-.columnSmall {
-  float: left;
-  width: 10%;
-}
 .columnBig{
-  float: left;
-  width: 90%;
+  width: 100%;
 }
 .row{
-	height:100%;
-	display: flex;
+  height:100%;
+  display: flex;
 }
 
 
@@ -162,34 +161,28 @@ main {
   .header-basic-light .header-limiter nav a {
     font-size: 20px;
   }
-
-}
-
-body {
-  margin:0;
-  padding:0;
 }
 
 .descriptionBox {
   margin: auto;
   border-radius: 25px;
-  border: 1px solid #ccc8c8;
+/*  border: 1px solid #ccc8c8;*/
   padding: 20px;
   width: 90%;
   height: 800px;
-  overflow-y: scroll;
-}
-.box1{
-  float :left;
-  max-width: 55%;
-  min-width: 55%;
+  display: block;
 }
 
-.descriptionGraph{
-  max-width: 40%;
-  min-width: 40%;
-  position:relative;
-  float:right
+.box1{
+  float:left; 
+
+  max-width: 25%;
+  max-width:25%;
+
+  min-height: 43%;
+  max-height: 43%;
+
+/*  border: 1px solid #ccc8c8;*/
 }
 
 
@@ -200,3 +193,59 @@ body {
   padding-top: 20%;
   text-align: center;
 }
+
+.imageStyle1{
+  transition: 0.5s;
+
+  border: 1px solid #ccc8c8;
+  border-radius: 25px;
+
+  max-width:90%;
+  max-height:90%;
+  opacity: 1;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.imageStyle2{
+  border: 1px solid #ccc8c8;
+  border-radius: 25px;
+
+  transition: 0.5s;
+  max-width:95%;
+  max-height:95%;
+  opacity: 0.5;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+
+.absolute-text-invisible{
+  transition: 0s;
+
+  position:absolute;
+  bottom:25%; 
+  font-size:30px;
+  font-family: 'Roboto Mono';
+  padding:10px 20px; 
+  width:100%; 
+  text-align:center;
+  visibility: hidden;
+
+}
+
+.absolute-text-visible{
+  transition: 1s;
+
+  visibility: visible;
+  position:absolute;
+  bottom:25%; 
+  font-size:30px;
+  font-family: 'Roboto Mono';
+  padding:10px 20px; 
+  width:100%; 
+  text-align:center;
+}
+
