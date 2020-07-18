@@ -10,5 +10,5 @@ function revertButton(buttonId,buttonTitleId){
 }
 
 function goToLink(link){
-	location.replace(link);
+	window.location.href=(link);
 }
