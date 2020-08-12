@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+
+<script src="main.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+<script src="https://cdn.plot.ly/plotly-latest.min.js"></script>
+<link rel="stylesheet" type="text/css" href="styles.css">
+
+<link rel="stylesheet" href="https://cdn.metroui.org.ua/v4.3.2/css/metro-all.min.css">
+<script src="https://cdn.metroui.org.ua/v4.3.2/js/metro.min.js"></script>
+
+<body onload="setInputCalendar((todayDate()))">
+	<section style="padding-left:4%; padding-top: 50px; padding-bottom: 40px;">
+
+			<section class="side">
+				<h1 id="viewingDate"></h1>
+			</section>
+			<section class="side" >
+				<section id="calendarSelect"  style="width:100%; z-index: 1000; padding-left: 70px; padding-top: 30px;">
+					<script>
+						function getValue(sel, day, el){
+							var dateObj = new Date(sel*1);
+							var month = dateObj.getUTCMonth() + 1;
+							var day = dateObj.getUTCDate();
+							var year = dateObj.getUTCFullYear();
+							getData(month+'_'+day+'_'+year)
+						}
+					</script>
+				</section>
+			</section>
+	</section>
+
+
+
+ 	<div class="grid-container">
+ 		<div class="grid-item">
+			<div id="worldnews"></div>
+		</div>
+		<div class="grid-item">
+			<div id="upliftingnews"></div>
+		</div>
+		<div class="grid-item">
+			<div id="politics"></div>
+		</div>
+		
+	</div>
+
+
+</body>
+</html>
+
