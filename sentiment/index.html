@@ -9,7 +9,7 @@
 <link rel="stylesheet" href="https://cdn.metroui.org.ua/v4.3.2/css/metro-all.min.css">
 <script src="https://cdn.metroui.org.ua/v4.3.2/js/metro.min.js"></script>
 
-<body onload="setInputCalendar((todayDate()))">
+<body onload="setInputCalendar((startingDate()))">
 	<section style="padding-left:4%; padding-top: 50px; padding-bottom: 40px;">
 
 			<section class="side">
@@ -32,16 +32,34 @@
 
 
 
- 	<div class="grid-container">
+ 	<div class="grid-container" style="padding-left: 10%;">
  		<div class="grid-item">
 			<div id="worldnews"></div>
 		</div>
+
+			<section id ="worldnewsKey">
+				
+			</section>
+
+			<br>
+
 		<div class="grid-item">
 			<div id="upliftingnews"></div>
 		</div>
+
+		<section id ="upliftingnewsKey">
+				
+		</section>
+		<br>
+
 		<div class="grid-item">
 			<div id="politics"></div>
 		</div>
+
+		<section id ="politicsKey">
+				
+		</section>
+		<br>
 		
 	</div>
 

@@ -5,6 +5,7 @@
 
 .grid-item {
   text-align: left;
+  float:left;
 }
 
 .sideBySide{

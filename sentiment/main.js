@@ -53,8 +53,24 @@ function main(whereToPlace,graphTitle,desiredDate,size){
 	  width: 500
 	};
 	Plotly.newPlot(whereToPlace, data, layout);
-
 }
+
+
+
+
+function loadKeywords(desiredDate){
+
+	url="https://raw.githubusercontent.com/gregTret/dataSets/master/worldnews/"+desiredDate+"_image.png"
+	document.getElementById("worldnewsKey").innerHTML="<img src="+url+">"
+
+	url="https://raw.githubusercontent.com/gregTret/dataSets/master/upliftingnews/"+desiredDate+"_image.png"
+	document.getElementById("upliftingnewsKey").innerHTML="<img src="+url+">"
+
+	url="https://raw.githubusercontent.com/gregTret/dataSets/master/politics/"+desiredDate+"_image.png"
+	// document.getElementById("politicsKey").innerHTML="<img src="+url+" style='width:500px; height:500px;'> >"
+	document.getElementById("politicsKey").innerHTML="<img src="+url+">"
+}
+
 
 function getData(desiredDate){
 	jQuery.ajax({
@@ -96,6 +112,8 @@ function getData(desiredDate){
 	        console.log(textStatus);
 	    }
 	});
+
+	loadKeywords(desiredDate)
 }
 
 function currentDate(){
@@ -160,11 +178,10 @@ function setInputCalendar(desiredDate){
 
 	 calIn.setAttribute("data-preset",convertAlt(todayDate()));
 
-	
-
 	 calendar.appendChild(calIn)
 	 getData(desiredDate)
 }
+
 
 
 
