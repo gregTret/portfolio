@@ -166,25 +166,39 @@ main {
 .descriptionBox {
   padding-top: 50px;
   float:right;
-  overflow:auto
+  overflow:auto;  
   margin: auto;
 /*  border-radius: 25px;
   border: 1px solid #ccc8c8;*/
   width: 65%;
-  height:130vh;
-  display: block;
+  /* height:130vh; */
+  /* display: block; */
 }
 
-.box1{
+.row {
+  width:65%;
+  display: flex;
+  flex-wrap: wrap;
+  padding: 0 4px;
+  float:right;
+}
+.column {
+  flex: 50%;
+  padding: 0 4px;
+}
 
-  float:left; 
+.column img {
+  margin-top: 8px;
+  vertical-align: middle;
+}
+
+
+.box1{
+  float:left;
   min-width: 45%;
   max-width: 45%;
   min-height: 43%;
   max-height: 43%;
-/*
-  border-radius: 25px;
-  border: 1px  #ccc8c8;*/
 
 }
 
@@ -199,10 +213,8 @@ main {
 
 .imageStyle1{
   transition: 0.5s;
-
   border: 1px solid #ccc8c8;
   border-radius: 25px;
-
   max-width:90%;
   max-height:90%;
   opacity: 1;
@@ -210,7 +222,6 @@ main {
   margin-left: auto;
   margin-right: auto;
 }
-
 .imageStyle2{
   border: 1px solid #ccc8c8;
   border-radius: 25px;
@@ -222,37 +233,6 @@ main {
   margin-left: auto;
   margin-right: auto;
 }
-
-
-.absolute-text-invisible{
-  transition: 0s;
-
-  position:absolute;
-  bottom:25%; 
-  font-size:30px;
-  font-family: 'Roboto Mono';
-  padding:10px 20px; 
-  width:100%; 
-  text-align:center;
-  visibility: hidden;
-
-}
-
-.absolute-text-visible{
-  transition: 1s;
-
-  visibility: visible;
-  position:absolute;
-  bottom:25%; 
-  font-size:30px;
-  font-family: 'Roboto Mono';
-  padding:10px 20px; 
-  width:100%; 
-  text-align:center;
-}
-
-
-
 .leftSide{
   border-radius: 25px;
   position:fixed;
@@ -262,7 +242,6 @@ main {
   height:100vh;
   background-color: #b6b8ba;
 }
-
 
 .mainTitle{
   padding-top: 20px;
@@ -329,10 +308,6 @@ main {
   float:left; 
   min-width: 45%;
   max-width: 45%;
-/*  min-height: 43%;*/
   max-height: 43%;
-/*
-  border-radius: 25px;
-  border: 1px  #ccc8c8;*/
 
 }

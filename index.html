@@ -5,15 +5,9 @@
 		<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
 		<link rel="stylesheet" href="includes/stylesheet.css">
 		<link href="https://fonts.googleapis.com/css2?family=Roboto+Mono:wght@400&display=swap" rel="stylesheet">
-
 	</head>
 	<body style="background-color: #e6e6e6" onload="">
-
-		
-
-
 			<div class="leftSide" style="float: left;">
-
 				<h1> <a class="mainTitle" href="../"><span>Tretiakov</span></a></h1>
 				<a class="menuHeading" href="./about.html"><span>About</span></a>
 				<br><br>
@@ -23,45 +17,41 @@
 				<br><br>
 				<div class="menuText">Visualizing the Yield Curve</div>
 				<div class="menuText" >Automatic Code Retrieval</div>
-				<div style="padding-bottom: 30px;" class="menuText" >Subreddit Sentiment Analysis</div>
+				<div class="menuText" >Pytorch Image Classification</div>
+				<div style="padding-bottom: 30px;" class="menuText" ></div>
 				<br><br><br><br><br><br><br>
-
 				<a style="padding-right: 10px;" class="menuHeading" href="https://github.com/gregtret"><span>Github</span></a>
 				<a style="padding-left: 10px;" class="menuHeading" href="https://www.linkedin.com/in/gregorytretiakov/"><span>LinkedIn</span></a>
-				
-				
 			</div>
 
-			<div class="descriptionBox">
-				<div class="box1">
-					<div onclick="goToLink('./yieldCurve')" style="position:relative;" onmouseout="revertButton('imageStyle1','buttonText1')" onmouseover="alterButton('imageStyle1','buttonText1')">
-						<img id="imageStyle1" class="imageStyle1" src="images/yield.PNG" alt="Yield Example">
-						<p id="buttonText1" class="absolute-text-invisible">30 Years of the Yield Curve</p>
-					</div>	
-				</div>	
-	
-				<div class="box1">
-					<div onclick="goToLink('./devtools')" style="position:relative;" onmouseout="revertButton('imageStyle2','buttonText2')" onmouseover="alterButton('imageStyle2','buttonText2')">
-						<img id="imageStyle2" class="imageStyle1" src="images/codeforme.PNG" alt="Yield Example">
-						<p id="buttonText2" class="absolute-text-invisible">Automatic Code retrieval from Github</p>
-					</div>	
-				</div>	
+			<div class="row">
+				<div class="column">
+					<div class="box1">
+						<div onclick="goToLink('./yieldCurve')" style="position:relative;" onmouseout="revertButton('imageStyle1','buttonText1')" onmouseover="alterButton('imageStyle1','buttonText1')">
+							<img id="imageStyle1" class="imageStyle1" src="images/yield.PNG" alt="Yield Example">
+						</div>	
+					</div>
+					<div class="box1">
+						<div onclick="goToLink('https://github.com/gregTret/pytorch')" style="position:relative;" onmouseout="revertButton('imageStyle3','buttonText3')" onmouseover="alterButton('imageStyle3','buttonText3')">
+							<img id="imageStyle3" class="imageStyle1" src="images/pytorch.PNG" alt="Image Classification">
+						</div>	
+					</div>
+				</div>
 
-				<div class="box1">
-					<div onclick="goToLink('./sentiment')" style="position:relative;" onmouseout="revertButton('imageStyle3','buttonText3')" onmouseover="alterButton('imageStyle3','buttonText3')">
-						<img id="imageStyle3" class="imageStyle1" src="images/sentiment.PNG" alt="Yield Example">
-						<p id="buttonText3" class="absolute-text-invisible">Sentiment Analysis</p>
+				<div class="column">
+					<div class="box1">
+						<div onclick="goToLink('./devtools')" style="position:relative;" onmouseout="revertButton('imageStyle2','buttonText2')" onmouseover="alterButton('imageStyle2','buttonText2')">
+							<img id="imageStyle2" class="imageStyle1" src="images/codeforme.PNG" alt="Yield Example">
+						</div>	
 					</div>	
-				</div>	
 
+				</div>	
 <!-- 
-				<div class="box1">
-					<div onclick="goToLink('https://codeforme.ca/data/yieldcurve')" style="position:relative;" onmouseout="revertButton('imageStyle4','buttonText4')" onmouseover="alterButton('imageStyle4','buttonText4')">
-						<img id="imageStyle4" class="imageStyle1" src="images/yield.png" alt="Yield Example">
-						<p id="buttonText4" class="absolute-text-invisible">4</p>
+						<div class="box1">
+						<div onclick="goToLink('https://github.com/gregTret/pytorch')" style="position:relative;" onmouseout="revertButton('imageStyle4','buttonText4')" onmouseover="alterButton('imageStyle4','buttonText4')">
+							<img id="imageStyle4" class="imageStyle1" src="images/pytorch.PNG" alt="Image Classification">
+						</div>	
 					</div>	
-				</div>	
-
 				<div class="box1">
 					<div onclick="goToLink('https://codeforme.ca/data/yieldcurve')" style="position:relative;" onmouseout="revertButton('imageStyle5','buttonText5')" onmouseover="alterButton('imageStyle5','buttonText5')">
 						<img id="imageStyle5" class="imageStyle1" src="images/yield.png" alt="Yield Example">
@@ -87,12 +77,6 @@
 					</div>	
 				</div>	
  -->
-
-
-
-			</div>
-
-
 
 	</body>
 </html>

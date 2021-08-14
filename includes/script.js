@@ -1,7 +1,5 @@
 function alterButton(buttonId,buttonTitleId){
 	document.getElementById(buttonId).className = "imageStyle2";
-	document.getElementById(buttonTitleId).className = "absolute-text-visible";
-
 }
 
 function revertButton(buttonId,buttonTitleId){
