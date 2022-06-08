@@ -1,84 +1,191 @@
 <!DOCTYPE html>
-	<head>
-		<script src="https://cdn.plot.ly/plotly-latest.min.js"></script>
-		<script type="text/javascript" src='includes/script.js'> </script>
-		<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
-		<link rel="stylesheet" href="includes/stylesheet.css">
-		<link href="https://fonts.googleapis.com/css2?family=Roboto+Mono:wght@400&display=swap" rel="stylesheet">
-	</head>
-	<body style="background-color: #e6e6e6" onload="">
-			<div class="leftSide" style="float: left;">
-				<h1> <a class="mainTitle" href="../"><span>Tretiakov</span></a></h1>
-				<a class="menuHeading" href="./about.html"><span>About</span></a>
-				<br><br>
-				<a class="menuHeading" href="./resume.html"><span>Resume</span></a>
-				<br><br>
-				<a class="menuHeading" href="./index.html"><span>Projects</span></a>
-				<br><br>
-				<div class="menuText">Visualizing the Yield Curve</div>
-				<div class="menuText" >Automatic Code Retrieval</div>
-				<div class="menuText" >Pytorch Image Classification</div>
-				<div style="padding-bottom: 30px;" class="menuText" ></div>
-				<br><br><br><br><br><br><br>
-				<a style="padding-right: 10px;" class="menuHeading" href="https://github.com/gregtret"><span>Github</span></a>
-				<a style="padding-left: 10px;" class="menuHeading" href="https://www.linkedin.com/in/gregorytretiakov/"><span>LinkedIn</span></a>
-			</div>
+<html>
+    <head>
+        <link rel="stylesheet" href="styles.css" />
+        <meta name="viewport" content="width=device-width, initial-scale=1" />
+        <!-- <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.3.1/dist/css/bootstrap.min.css"
+    integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+  <meta name="viewport" content="width=device-width, initial-scale=1"> -->
+    </head>
 
-			<div class="row">
-				<div class="column">
-					<div class="box1">
-						<div onclick="goToLink('./yieldCurve')" style="position:relative;" onmouseout="revertButton('imageStyle1','buttonText1')" onmouseover="alterButton('imageStyle1','buttonText1')">
-							<img id="imageStyle1" class="imageStyle1" src="images/yield.PNG" alt="Yield Example">
-						</div>	
-					</div>
-					<div class="box1">
-						<div onclick="goToLink('https://github.com/gregTret/pytorch')" style="position:relative;" onmouseout="revertButton('imageStyle3','buttonText3')" onmouseover="alterButton('imageStyle3','buttonText3')">
-							<img id="imageStyle3" class="imageStyle1" src="images/pytorch.PNG" alt="Image Classification">
-						</div>	
-					</div>
-				</div>
+    <body>
+        <video autoplay muted id="myVideo">
+            <source src="images/skyline.mp4" type="video/mp4" />
+            Your browser does not support HTML5 video.
+        </video>
+        <div class="wrapper">
+            <nav class="menu">
+                <a
+                    href="https://www.linkedin.com/in/gregorytretiakov/"
+                    class="menu__link"
+                    >Tretiakov</a
+                >
+                <a href="#projectLocation" class="menu__link">projects</a>
+                <a href="#experienceLocation" class="menu__link">experience</a>
+                <a href="#hobbiesLocation" class="menu__link">hobbies</a>
+            </nav>
+        </div>
 
-				<div class="column">
-					<div class="box1">
-						<div onclick="goToLink('./devtools')" style="position:relative;" onmouseout="revertButton('imageStyle2','buttonText2')" onmouseover="alterButton('imageStyle2','buttonText2')">
-							<img id="imageStyle2" class="imageStyle1" src="images/codeforme.PNG" alt="Yield Example">
-						</div>	
-					</div>	
+        <div class="projects" id="projectLocation" style="margin-top: 100vh">
+            <!-- <p style="font-size: 21px; ">PROJECTS</p> -->
+            <div id="columns">
+                <figure>
+                    <a href="https://github.com/gregTret/KrakenBot">
+                        <img src="./images/algo.jpeg" />
+                    </a>
+                    <figcaption class="figText">
+                        Cryptocurrency Trading bot built in Python using Pytorch
+                        and image classification to determine buy and sell
+                        points.
+                    </figcaption>
+                </figure>
+                <figure>
+                    <a href="./devtools/index.html">
+                        <img src="./images/codeforme.PNG" />
+                    </a>
+                    <figcaption>
+                        A project that was built to return code from
+                        Stackoverflow QA's depending on a given search criteria.
+                    </figcaption>
+                </figure>
+                <figure>
+                    <a href="./yieldCurve/index.html">
+                        <img src="./images/yield.PNG" />
+                    </a>
+                    <figcaption>
+                        A visualization tool to view historic changes in the
+                        yield curve of the US Federal reserve.
+                    </figcaption>
+                </figure>
+                <figure>
+                    <a href="https://github.com/gregTret">
+                        <img src="./images/github.jpg" />
+                    </a>
+                    <figcaption>
+                        Older and ongoing projects that do not have dedicated
+                        websites built for them yet.
+                    </figcaption>
+                </figure>
+            </div>
+        </div>
+        <br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br />
+        <br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br />
+        <div class="experience" id="experienceLocation">
+            <link
+                href="https://fonts.googleapis.com/css?family=Open+Sans:400,300,300italic,400italic,600,600italic,700,700italic"
+                rel="stylesheet"
+                type="text/css"
+            />
 
-				</div>	
-<!-- 
-						<div class="box1">
-						<div onclick="goToLink('https://github.com/gregTret/pytorch')" style="position:relative;" onmouseout="revertButton('imageStyle4','buttonText4')" onmouseover="alterButton('imageStyle4','buttonText4')">
-							<img id="imageStyle4" class="imageStyle1" src="images/pytorch.PNG" alt="Image Classification">
-						</div>	
-					</div>	
-				<div class="box1">
-					<div onclick="goToLink('https://codeforme.ca/data/yieldcurve')" style="position:relative;" onmouseout="revertButton('imageStyle5','buttonText5')" onmouseover="alterButton('imageStyle5','buttonText5')">
-						<img id="imageStyle5" class="imageStyle1" src="images/yield.png" alt="Yield Example">
-						<p id="buttonText5" class="absolute-text-invisible">5</p>
-					</div>	
-				</div>	
-				<div class="box1">
-				<div onclick="goToLink('https://codeforme.ca/data/yieldcurve')" style="position:relative;" onmouseout="revertButton('imageStyle6','buttonText6')" onmouseover="alterButton('imageStyle6','buttonText6')">
-						<img id="imageStyle6" class="imageStyle1" src="images/yield.png" alt="Yield Example">
-						<p id="buttonText6" class="absolute-text-invisible">6</p>
-					</div>	
-				</div>	
-				<div class="box1">
-					<div onclick="goToLink('https://codeforme.ca/data/yieldcurve')" style="position:relative;" onmouseout="revertButton('imageStyle7','buttonText7')" onmouseover="alterButton('imageStyle7','buttonText7')">
-						<img id="imageStyle7" class="imageStyle1" src="images/yield.png" alt="Yield Example">
-						<p id="buttonText7" class="absolute-text-invisible">7</p>
-					</div>	
-				</div>	
-				<div class="box1">
-					<div onclick="goToLink('https://codeforme.ca/data/yieldcurve')" style="position:relative;" onmouseout="revertButton('imageStyle8','buttonText8')" onmouseover="alterButton('imageStyle8','buttonText8')">
-						<img id="imageStyle8" class="imageStyle1" src="images/yield.png" alt="Yield Example">
-						<p id="buttonText8" class="absolute-text-invisible">8</p>
-					</div>	
-				</div>	
- -->
+            <!-- The Timeline -->
 
-	</body>
+            <ul class="timeline">
+                <!-- Item 1 -->
+                <li>
+                    <div class="direction-l">
+                        <div class="flag-wrapper">
+                            <span class="flag wbg">September 2017</span>
+                        </div>
+                        <div class="desc">
+                            Started studying @Dalhousie University
+                        </div>
+                    </div>
+                </li>
+
+                <!-- Item 2 -->
+                <li>
+                    <div class="direction-r">
+                        <div class="flag-wrapper">
+                            <span class="flag wbg">Summer 2018</span>
+                        </div>
+                        <div class="desc">
+                            Instructor, Science Engagement Office @YorkU
+                        </div>
+                    </div>
+                </li>
+
+                <li>
+                    <div class="direction-l">
+                        <div class="flag-wrapper">
+                            <span class="flag wbg">September 2019</span>
+                        </div>
+                        <div class="desc">
+                            Teaching Assistant for Systems Programming and
+                            Robotics @Dalhousie
+                        </div>
+                    </div>
+                </li>
+                <!-- Item 3 -->
+                <li>
+                    <div class="direction-r">
+                        <div class="flag-wrapper">
+                            <span class="flag wbg">October 2019</span>
+                        </div>
+                        <div class="desc">
+                            Software Developer for ARAD project @Dalhousie
+                        </div>
+                    </div>
+                </li>
+
+                <!-- Item 4 -->
+                <li>
+                    <div class="direction-l">
+                        <div class="flag-wrapper">
+                            <span class="flag wbg">January 2020</span>
+                        </div>
+                        <div class="desc">
+                            Remote Software Developer @Brandactive
+                        </div>
+                    </div>
+                </li>
+
+                <li>
+                    <div class="direction-r">
+                        <div class="flag-wrapper">
+                            <span class="flag wbg">October 2021</span>
+                        </div>
+                        <div class="desc">Developer @Wealthica</div>
+                    </div>
+                </li>
+
+                <li>
+                    <div class="direction-l">
+                        <div class="flag-wrapper">
+                            <span class="flag wbg">January 2022</span>
+                        </div>
+                        <div class="desc">Software Developer @CGI</div>
+                    </div>
+                </li>
+            </ul>
+        </div>
+
+        <div class="hobbySection" id="hobbiesLocation">
+            <div class="hobbies">
+                <div class="hobbiesTitle">
+                    <h1>Interests</h1>
+                </div>
+            </div>
+
+            <div class="hobbies" id="hobbyList">
+                <div class="hobbyItem">
+                    <h4>Biking</h4>
+                </div>
+                <div class="hobbyItem">
+                    <h4>Longboarding</h4>
+                </div>
+                <div class="hobbyItem">
+                    <h4>Drone Photography</h4>
+                </div>
+                <div class="hobbyItem">
+                    <h4>Reading</h4>
+                </div>
+                <div class="hobbyItem">
+                    <h4>Gaming</h4>
+                </div>
+                <div class="hobbyItem">
+                    <h4>Chess</h4>
+                </div>
+            </div>
+        </div>
+    </body>
 </html>
-
-
