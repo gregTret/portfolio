@@ -1,4 +1,4 @@
 # Portfolio Website
 Github version of my portfolio website. 
 
-[gregtret.com](https://gregtret.com)
+[gregtret.com](https://gregtret.ca)
