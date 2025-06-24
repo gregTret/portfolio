@@ -1,0 +1,21 @@
+name: Build and Deploy
+on:
+  push:
+    branches:
+      - master
+jobs:
+  build:
+
+    runs-on: ubuntu-latest
+
+    steps:    
+    - name: Script - Deploy Changes
+      run: |
+         chmod +x ./scripts/prep_and_deploy.sh
+         ./scripts/prep_and_deploy.sh
+      shell: bash
+      env:
+        port: ${{ secrets.PORT }}
+        host: ${{ secrets.HOST }}
+        username: ${{ secrets.USERNAME }}
+        password: ${{ secrets.PASSWORD }}

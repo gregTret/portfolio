@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" />
+
+  <link rel="stylesheet" type="text/css" href="css/styles.css" />
+  <script type="text/javascript" src="scripts/scripts.js"></script>
+
+  <title>Code for Me</title>
+</head>
+
+<body>
+  <div class="Navigation" id="nav">
+    <a href="./index.html" style="font-weight: bold;">code for me</a>
+    <a href="./about.html">about</a>
+    <a href="./contact.html">contact</a>
+    <a href="javascript:void(0);" class="icon" onclick="ResponsiveNavvy()">
+      <i class="fa fa-bars"></i>
+    </a>
+  </div>
+  <div class="grid">
+    <!-- Below is the Card component -->
+    <div class="card" style="justify-content: flex-start;">
+      <div>
+        <h1>Contact</h1>
+        <a id="Contact"></a>
+        <h4>Bug Report</h4>
+        <form action="files/contactBug.php" method="get">
+          <label>
+            <input class="input" type="text" name="email" placeholder="Email: name@example.com" required />
+          </label>
+          <label>
+            <input class="input" name="message" type="text" placeholder="Message"
+              style=" height: 10rem; margin-top: 2rem" required />
+          </label>
+          <br />
+          <button type="submit" class="submit">Submit</button>
+        </form>
+      </div>
+    </div>
+    <!-- This is the contact developer form-->
+    <div class="card" style="justify-content: flex-start; margin-top: 200px;">
+      <div>
+        <p>
+          If you have any questions or comments for us please feel free to
+          reach us at
+        </p>
+        <p>support@codeforme.ca</p>
+      </div>
+    </div>
+  </div>
+</body>
+</html>
