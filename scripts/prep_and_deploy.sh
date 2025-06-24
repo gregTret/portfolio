@@ -27,17 +27,17 @@ else
     exit 1
 fi
 
-echo "--Copying portfolio files to server--"
-sshpass -p $password scp -P $port -r ./portfolio_site/* $username@$host:./public_html/
-if [ $? -eq 0 ]; then
-    echo "Portfolio files copied successfully"
-else
-    echo "Failed to copy portfolio files"
-    exit 1
-fi
+# echo "--Copying portfolio files to server--"
+# sshpass -p $password scp -P $port -r ./portfolio_site/* $username@$host:./public_html/
+# if [ $? -eq 0 ]; then
+#     echo "Portfolio files copied successfully"
+# else
+#     echo "Failed to copy portfolio files"
+#     exit 1
+# fi
 
-echo "--Setting file permissions--"
-sshpass -p $password ssh -p $port -o StrictHostKeyChecking=no $username@$host "cd public_html; chmod -R 644 *.html *.css *.js 2>/dev/null; chmod -R 755 . 2>/dev/null; exit;"
+# echo "--Setting file permissions--"
+# sshpass -p $password ssh -p $port -o StrictHostKeyChecking=no $username@$host "cd public_html; chmod -R 644 *.html *.css *.js 2>/dev/null; chmod -R 755 . 2>/dev/null; exit;"
 
 echo "--Verifying deployment--"
 sshpass -p $password ssh -p $port -o StrictHostKeyChecking=no $username@$host "cd public_html; ls -la; exit;"
